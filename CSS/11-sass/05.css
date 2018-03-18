@@ -1,0 +1,21 @@
+.margins {
+  margin: 0 2em;
+  padding-top: 1em;
+}
+
+.message, .error, .warning {
+  border: 4px solid #ccc;
+  color: #333;
+  border-radius: 2px;
+}
+
+.error {
+  border-color: red;
+}
+
+.warning {
+  border-color: yellow;
+}
+ 
+
+ /*# sourceMappingURL= 05.css.map */

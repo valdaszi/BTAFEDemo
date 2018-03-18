@@ -1,0 +1,9 @@
+$spalva: #00ff00;
+$margin: 10px;
+$margin2: 50px;
+
+.box {
+    background-color: $spalva;
+    margin-left: ($margin + $margin2) / 2;
+    width: 600px / 960px * 100%;
+}

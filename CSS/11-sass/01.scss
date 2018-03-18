@@ -1,0 +1,13 @@
+.content {
+    background-color: lightgrey;
+    color: black;
+    a {
+        color: yellow;
+        &:link, &:visited {
+            color: brown;
+        }
+        &:hover {
+            color: green;
+        }
+    }
+}

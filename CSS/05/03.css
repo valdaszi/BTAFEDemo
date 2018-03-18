@@ -1,0 +1,13 @@
+.a {
+    list-style-type: circle;
+}
+.b {
+    list-style-type: upper-roman;
+}
+.c {
+    list-style-type: none;
+}
+.c li {
+    display: inline;
+    margin: 1em;
+}

@@ -1,0 +1,13 @@
+@mixin message($color, $padding) {
+    border: 1em solid $color;
+    padding: $padding;
+    background-color: lighten($color, 30%);
+}
+
+.error {
+    @include message(red, 10px);
+}
+
+.warning {
+    @include message(yellow, 20px);
+}

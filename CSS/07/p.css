@@ -1,0 +1,22 @@
+.a {
+    width: 50vw;
+    height: 50vw;
+    margin: auto;
+    background-color: grey;
+    color: white;
+    text-align: center;
+    transition-property: border-radius, background-color, transform;
+    transition-duration: 2s;
+}
+
+.a div {
+    margin: auto;
+    position: relative;
+    top: calc(50% - 0.5em);
+}
+
+.a:hover {
+    border-radius: 50%;
+    background-color: green;
+    transform: rotate(720deg);
+}

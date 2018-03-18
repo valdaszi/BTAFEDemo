@@ -1,0 +1,28 @@
+.table {
+    display: table;
+}
+.tr {
+    display: table-row;
+}
+.th {
+    border-top: 1px solid black;  
+    border-bottom: 1px solid black;  
+}
+.td, .th {
+    display: table-cell;
+    padding: 5px;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;  
+}
+.td:first-child, .th:first-child {
+    border-left: 1px solid black;  
+}
+.th {
+    font-weight: bold;
+}
+.right {
+    text-align: right;
+}
+.inline-table {
+    display: inline-table;
+}

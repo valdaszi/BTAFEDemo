@@ -1,0 +1,24 @@
+@mixin box-margin($top, $margin...) {
+    margin: $margin;
+    padding-top: $top;
+}
+
+.margins {
+    @include box-margin(1em, 0 2em);
+}
+
+.message {
+    border: 4px solid #ccc;
+    color: #333;
+    border-radius: 2px;
+}
+
+.error {
+    @extend .message;
+    border-color: red;
+}
+
+.warning {
+    @extend .message;
+    border-color: yellow;
+}

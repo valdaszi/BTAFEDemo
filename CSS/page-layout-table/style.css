@@ -1,0 +1,52 @@
+body {
+    background-color: white;
+}
+.content {
+    max-width: 600px;
+    margin: auto;
+    background-color: #f0f0f0;
+}
+
+.table {
+    display: table;
+}
+.tr {
+    display: table-row;
+}
+.td {
+    display: table-cell;
+}
+
+ul { 
+    padding: 0
+}
+li {
+    list-style-type: none;
+}
+li a {
+    text-decoration: none;
+}
+
+nav {
+    background-color: #ffb0ff;
+}
+section {
+    background-color: #ffffb0;
+}
+aside {
+    background-color: #b0ffff;
+}
+
+.margin {
+    margin: 1em;
+}
+
+nav {
+    width: 6em;
+}
+section {
+    width: 100%;
+}
+aside {
+    width: 7em; 
+}

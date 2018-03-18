@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CSS 04</title>
+		<style>
+			.container {
+				background-color: lightblue;
+				color: red;
+			}
+
+			.container .container {
+				background-color: lightgreen;
+			}
+
+			div + div {
+				color: yellow;
+			}
+		</style>
+
+	</head>
+	<body>
+        <div class="container">
+		    <div>1 Kažkoks tekstas</div>
+		    <div>2 Kažkoks tekstas</div>
+		    <div>3 Kažkoks tekstas</div>
+		    <div>4 Kažkoks tekstas</div>
+            <div class="container">
+                <div>4.1 Kažkoks tekstas</div>
+                <div>4.2 Kažkoks tekstas</div>
+                <div>4.3 Kažkoks tekstas</div>
+                <div>4.4 Kažkoks tekstas</div>
+            </div>
+            <div>5 Kažkoks tekstas</div>
+        </div>
+	</body>
+</html>   

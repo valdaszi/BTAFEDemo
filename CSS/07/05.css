@@ -1,0 +1,18 @@
+.a {
+    color: red;
+    background-color: goldenrod;
+    transition-duration: 3s;
+    transition-property: color, background-color;
+}
+
+.a:hover {
+    background-color: green;
+    color: white;
+}
+
+.b {
+    background-color: greenyellow;
+}
+.c {
+    background-color: blueviolet;
+}

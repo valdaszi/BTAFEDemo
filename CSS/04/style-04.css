@@ -1,0 +1,31 @@
+body {
+    background-image: url("background.png"); 
+    background-position: center;
+    /* background-repeat: no-repeat; */
+}
+
+.scroll, .local, .fixed {
+    background-image: url("https://mdn.mozillademos.org/files/12057/starsolid.gif");
+    height: 200px;
+    width: 100px;
+    border: 1px solid black;
+    overflow: scroll;
+    float: left;
+    margin: 5px;
+}
+
+.scroll { 
+    background-attachment: scroll; 
+}
+
+.local { 
+    background-attachment: local; 
+}
+
+.fixed { 
+    background-attachment: fixed; 
+}
+
+.clear {
+    clear: both;
+}

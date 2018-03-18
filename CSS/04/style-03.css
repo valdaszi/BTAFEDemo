@@ -1,0 +1,18 @@
+body {
+   border: 1px solid black; 
+}
+.a {
+    width: 300px;
+    padding: 10px;
+    background-color: lightblue;
+    border: 10px solid blue;
+    margin: 10px;
+}
+
+.b {
+    width: 400px;
+    padding: 50px;
+    background-color: lightpink;
+    border: 20px solid red;
+    margin: 20px;
+}

@@ -1,0 +1,27 @@
+body, html {
+    font-size: 24px;
+}
+
+.a {
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    text-align: center;
+    background-color: lightblue;
+
+    border: 5px solid blue;
+    border-radius: 70px;
+}
+
+.b {
+    font-size: 32px;
+    width: 400px;
+    height: 100px;
+    padding: 50px;
+    text-align: center;
+    background-color: lightpink;
+
+    border: 5px solid red;
+    border-left-style: none;
+    border-right-style: none;
+}

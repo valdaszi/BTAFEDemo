@@ -1,0 +1,12 @@
+.a {
+    transform: rotate(45deg);
+    transform-origin: left center;
+    color: red;
+    background-color: goldenrod;
+}
+.b {
+    background-color: greenyellow;
+}
+.c {
+    background-color: blueviolet;
+}

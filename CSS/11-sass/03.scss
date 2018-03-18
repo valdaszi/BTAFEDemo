@@ -1,0 +1,8 @@
+$spalva: #00ff00;
+$spalva-tamsi: darken($spalva, 30%);
+$spalva-text: black;
+
+.box {
+    background-color: $spalva-tamsi;
+    color: lighten($spalva-text, 80%);
+}

@@ -1,0 +1,6 @@
+@mixin message($color) {
+    border: 5px solid $color;
+    padding: 1em;
+    background-color: lighten($color, 25%); 
+    color: black;
+}

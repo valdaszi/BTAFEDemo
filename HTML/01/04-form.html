@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Demo</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h1>Elementai form ir input</h1>
+        <form action="/login_page.php" method="get">
+            Vardas: <input type="text" name="vardas">
+            Pavardė: <input placeholder="Cia iveskite savo pavardė" type="text" name="pavarde"> 
+            <input type="hidden" name="token" value="secret-key">
+            <select name="a">
+                <option value="1">Vienas</option>
+                <option value="2" selected>Du</option>
+                <option value="3">Trys</option>
+            </select>
+            <input type="submit" value="Prisijungti">
+        </form>
+    </body>
+</html>
+

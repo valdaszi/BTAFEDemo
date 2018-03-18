@@ -1,0 +1,106 @@
+body {
+  font-size: 100%;
+}
+
+h1 {
+  margin: 0;
+  padding: 1rem;
+  background-color: #499149;
+  color: white;
+  font-size: 3em;
+  text-shadow: 2px 2px darkgreen;
+}
+
+ul {
+  padding: 0;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+ul li a {
+  text-decoration: none;
+}
+
+nav {
+  background-color: #2f5e2f;
+}
+
+nav h3, nav a {
+  color: yellow;
+}
+
+nav:hover h3, nav:hover a {
+  color: white;
+}
+
+section {
+  background-color: #408040;
+}
+
+section article h3, section article p {
+  color: white;
+}
+
+section article:hover h3, section article:hover p {
+  color: yellow;
+}
+
+aside {
+  background-color: #2f5e2f;
+}
+
+aside h3, aside a {
+  color: yellow;
+}
+
+.error {
+  border: 5px solid red;
+  padding: 1em;
+  background-color: #ff8080;
+  color: black;
+}
+
+.warning {
+  border: 5px solid yellow;
+  padding: 1em;
+  background-color: #ffff80;
+  color: black;
+}
+
+.margin {
+  margin: 1em;
+}
+
+nav {
+  width: 20%;
+  float: left;
+}
+
+section {
+  width: 55%;
+  float: left;
+}
+
+aside {
+  width: 25%;
+  float: right;
+}
+
+@media (max-width: 480px) {
+  nav, section, aside {
+    width: 100%;
+    float: none;
+  }
+  nav li {
+    display: inline;
+    margin-right: 2em;
+  }
+  .margin {
+    margin: 0.5em;
+  }
+}
+ 
+
+ /*# sourceMappingURL= style.css.map */

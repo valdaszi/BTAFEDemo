@@ -1,0 +1,12 @@
+body {
+   border: 1px solid black; 
+}
+.a {
+    width: 10cm;
+    background-color: lightblue;
+}
+
+.b {
+    width: 50mm;
+    background-color: lightpink;
+}

@@ -1,0 +1,17 @@
+html, body {
+    font-family: Times, serif;
+    font-size: 150%;
+    font-weight: 400;
+}
+
+header {
+   font-weight: 900; 
+}
+
+article {
+   font-style: italic;
+}
+
+footer {
+   font-weight: 100; 
+}

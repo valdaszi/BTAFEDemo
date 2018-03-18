@@ -1,0 +1,11 @@
+.a {
+    transform: rotate(-15deg);
+    color: red;
+    background-color: goldenrod;
+}
+.b {
+    background-color: greenyellow;
+}
+.c {
+    background-color: blueviolet;
+}

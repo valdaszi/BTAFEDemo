@@ -1,0 +1,11 @@
+.a {
+    transform: scale(1, 2);
+    color: red;
+    background-color: goldenrod;
+}
+.b {
+    background-color: greenyellow;
+}
+.c {
+    background-color: blueviolet;
+}

@@ -1,0 +1,37 @@
+.a {
+    width: 50vw;
+    height: 50vw;
+    margin: auto;
+    background-color: grey;
+    color: white;
+    text-align: center;
+}
+
+.a div {
+    margin: auto;
+    position: relative;
+    top: calc(50% - 0.5em);
+}
+
+
+@keyframes sukimas {
+    from {
+        background-color: red;
+        color: yellow;
+        opacity: 1;
+    }
+    to {
+        background-color: green;
+        color: white;
+        transform: rotate(360deg) scale(0);
+        /* opacity: 0; */
+    }
+}
+
+.a {
+    animation: sukimas 3s;
+    animation-direction: alternate;
+    animation-iteration-count: 2;
+    animation-delay: 2s;
+    animation-fill-mode: backwards;
+}

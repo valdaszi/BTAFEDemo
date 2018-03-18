@@ -1,0 +1,19 @@
+p::first-letter {
+    font-size: 200%;
+}
+
+.p2::first-line {
+    font-style: oblique;
+}
+
+.p1::before {
+    content: '\2600';
+    color: red;
+}
+
+.p2::after {
+    content: '- all texts are from www.lipsum.com';
+    color: darkgray;
+    font-size: 80%;
+    margin-left: 1em;
+}

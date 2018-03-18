@@ -1,0 +1,17 @@
+.a {
+    width: 600px;
+    height: 300px;
+    background: linear-gradient(135deg, yellow, green, red);
+}
+
+.b {
+    width: 600px;
+    height: 300px;
+    background: radial-gradient(circle, yellow, green, red);
+}
+
+.c {
+    width: 600px;
+    height: 300px;
+    background: radial-gradient(ellipse, yellow, green, red);
+}

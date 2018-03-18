@@ -1,0 +1,25 @@
+.flex {
+    /* basic styling */
+    width: 300px;
+    height: 300px;
+    border: 1px solid #555;
+
+    /* flexbox setup */
+    display: flex;
+    flex-direction: column;
+}
+
+.flex > div {
+    flex: 1 1 auto;
+    height: 100px;
+    transition: height 0.7s ease-out;
+}
+
+/* colors */
+.flex > div:nth-child(1){ background: #fdb913; }
+.flex > div:nth-child(2){ background: #006a44; }
+.flex > div:nth-child(3){ background: #c1272d; }
+
+.flex > div:hover {
+    height: 300px;
+}

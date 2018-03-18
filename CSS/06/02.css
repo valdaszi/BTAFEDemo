@@ -1,0 +1,20 @@
+div {
+    width: 300px;
+    height: 100px;
+    background-color: blue;
+    margin: 5px;
+}
+
+.l {
+    float: left;
+    background-color: lime;
+}
+
+.r {
+    float: right;
+    background-color: red;
+}
+
+.clear {
+    clear: both;
+}

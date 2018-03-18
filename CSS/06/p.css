@@ -1,0 +1,45 @@
+.container {
+    position: relative;
+    background-color: lightgrey;
+    width: 50vw;
+    height: 50vw;
+    margin: auto;
+}
+
+.r, .g, .b {
+    width: 55%;
+    height: 55%;
+    font-size: 2em;
+    color: white;
+    text-align: center;
+    border-radius: 50%; 
+    border-style: solid;
+    border-width: 0.25em;
+}
+
+.raide {
+    position: relative;
+    top: calc(50% - 0.5em);
+}
+
+.r {
+   background-color: rgba(255, 0, 0, 0.5);
+   border-color: red;
+   position: relative;
+   top: 1vw;
+   left: calc((45% - 2 * 0.25em) / 2);
+}
+.g {
+   background-color: rgba(0, 255, 0, 0.5);
+   border-color: green;
+   position: absolute;
+   left: 1vw;
+   bottom: 1vw;
+}
+.b {
+   background-color: rgba(0, 0, 255, 0.5);
+   border-color: blue;
+   position: absolute;
+   right: 1vw;
+   bottom: 1vw;
+}

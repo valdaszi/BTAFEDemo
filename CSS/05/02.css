@@ -1,0 +1,11 @@
+header, article {
+    display: inline;
+}
+strong {
+    display: block;
+}
+
+code {
+    display: inline-block;
+    width: 10em;
+}

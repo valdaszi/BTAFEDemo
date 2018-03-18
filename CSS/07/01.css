@@ -1,0 +1,10 @@
+.a {
+    transform: translate(4em, 0.5em);
+    color: red;
+}
+
+span {
+    display: block;
+    transform: translateY(1em);
+    color: green;
+}

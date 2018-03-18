@@ -1,0 +1,28 @@
+table {
+    width: 30em;
+    height: 30em;
+}
+td {
+    margin: 2px;
+}
+.A {
+    width: 75%;
+    background-color: green;
+}
+.B {
+    width: 25%;
+    background-color: green;
+}
+.C {
+    width: 25%;
+    background-color: yellow;
+}
+.D, .E, .G {
+    background-color: blue;
+}
+.F, .H {
+    background-color: #ea644e;
+}
+.I {
+    background-color:#3dcbbf;
+}

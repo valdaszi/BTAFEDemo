@@ -1,0 +1,14 @@
+.error {
+  border: 1em solid red;
+  padding: 10px;
+  background-color: #ff9999;
+}
+
+.warning {
+  border: 1em solid yellow;
+  padding: 20px;
+  background-color: #ffff99;
+}
+ 
+
+ /*# sourceMappingURL= 04.css.map */

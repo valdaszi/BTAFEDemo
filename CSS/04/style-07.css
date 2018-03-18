@@ -1,0 +1,16 @@
+html {
+    font-size: 120%;
+}
+
+.a {
+    font-size: 1.5em; 
+    width: 10em;
+    padding: 1em;
+    background-color: lightblue;
+}
+
+.b {
+    width: 50vw;
+    padding: 1rem;
+    background-color: lightpink;
+}

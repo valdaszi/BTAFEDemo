@@ -1,0 +1,28 @@
+p {
+    margin: auto;
+    width: 80%;
+    border: 1px solid blue;
+    border-radius: 5px;
+    padding: 1em;
+    
+    box-shadow: 0 0 20px blue;
+    text-shadow: 2px 1px lightgray;
+    
+    animation-name: light;
+    animation-fill-mode: both;
+    animation-duration: 500ms;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+
+@keyframes light {
+    from {
+        box-shadow: 0 0 30px blue;
+        text-shadow: 2px 1px lightgray;
+    }
+    to {
+        box-shadow: 0 0 0 blue;
+        text-shadow: -2px 3px lightgray;
+    }
+}

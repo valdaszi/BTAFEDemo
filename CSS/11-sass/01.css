@@ -1,0 +1,19 @@
+.content {
+  background-color: lightgrey;
+  color: black;
+}
+
+.content a {
+  color: yellow;
+}
+
+.content a:link, .content a:visited {
+  color: brown;
+}
+
+.content a:hover {
+  color: green;
+}
+ 
+
+ /*# sourceMappingURL= 01.css.map */

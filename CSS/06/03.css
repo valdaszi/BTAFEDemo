@@ -1,0 +1,46 @@
+html {
+    font-size: 150%;
+}
+
+.formule {
+    position: relative;
+}
+.virsuje {
+    font-size: 66%;
+    position: relative;
+    top: -0.5em;
+}
+
+div.container {
+    width: 100vw;
+    background-color: lightgray;
+}
+
+.a1 { background-color: yellow; }
+.a2 { background-color: blue; }
+.a3 { 
+    background-color: coral;
+    position: relative;
+}
+.a31 { 
+    background-color: greenyellow; 
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
+.a32 { 
+    background-color: blueviolet; 
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+div.container div {
+    width: 300px;
+    height: 300px;
+}
+
+div.container div div {
+    width: 100px;
+    height: 100px;
+}

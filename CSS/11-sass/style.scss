@@ -1,0 +1,103 @@
+$bg-color: #408040;
+$bg-color-title: lighten($bg-color, 5%);
+$bg-color-nav: darken($bg-color, 10%);
+$bg-color-aside: darken($bg-color, 10%);
+
+$margin: 1rem;
+
+$menu-color: yellow;
+
+@import "mixins";
+
+body {
+    font-size: 100%;
+}
+
+h1 {
+    margin: 0;
+    padding: 1rem;
+    background-color: $bg-color-title;
+    color: white;
+    font-size: 3em;
+    text-shadow: 2px 2px darkgreen;
+}
+
+ul { 
+    padding: 0;
+    li {
+        list-style-type: none;
+        a {
+            text-decoration: none;
+        }
+    }   
+}
+
+nav {
+    background-color: $bg-color-nav;
+    h3, a {
+        color: $menu-color;
+    }
+    &:hover {
+        h3, a {
+            color: white;
+        } 
+    }
+}
+
+section {
+    background-color: $bg-color;
+    article {
+        h3, p {
+            color: white;
+        }
+        &:hover {
+            h3, p {
+                color: yellow;
+            }
+        } 
+    }
+}
+aside {
+    background-color: $bg-color-aside;
+    h3, a {
+        color: $menu-color;
+    }
+}
+
+.error {
+    @include message(red);
+}
+.warning {
+    @include message(yellow);
+}
+
+.margin {
+    margin: 1em;
+}
+
+nav {
+    width: 20%;
+    float: left;
+}
+section {
+    width: 55%;
+    float: left;
+}
+aside {
+    width: 25%; 
+    float: right;
+}
+
+@media (max-width: 480px) {
+    nav, section, aside {
+       width: 100%; 
+       float: none;
+    }
+    nav li {
+        display: inline;
+        margin-right: 2em;
+    }
+    .margin {
+        margin: 0.5em;
+    }
+}
