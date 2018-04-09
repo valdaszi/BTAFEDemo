@@ -2,7 +2,7 @@ div {
     width: 30vw;
     height: 100vh;  
     display: inline-block;
-    margin: 5px;
+    margin: 0 5px;
 }
 .hidden {
     overflow: hidden;
