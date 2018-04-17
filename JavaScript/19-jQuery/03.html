@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>jQuery - events</title>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+</head>
+
+<body>
+        <script>
+                $(function() {
+                    $('button').dblclick(function() {
+                        $('p').slideToggle();
+                    });
+                });
+            </script>
+
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tincidunt eget nulla quis aliquam.
+        Maecenas vel nunc mauris. Suspendisse ut gravida mauris. Fusce ut dignissim eros.
+    </p>
+
+    <button>Jungtukas</button>
+    <button>Jungtukas 2</button>
+
+    
+</body>
+
+</html>

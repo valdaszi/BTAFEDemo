@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>jQuery - actions</title>
+    <meta charset="UTF-8">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+</head>
+
+<body>
+    <p>
+        <b>Lorem</b> ipsum dolor sit amet, consectetur adipiscing elit. <br>Pellentesque tincidunt eget nulla quis aliquam. 
+        <br>Maecenas vel nunc mauris. <br>Suspendisse ut gravida mauris. <br>Fusce ut dignissim eros.
+    </p>
+    
+    <button onclick="rodytiHtml()">html</button>
+    <button onclick="rodytiText()">text</button>
+
+    <hr>
+    <div id="d1">html</div>
+    <hr>
+    <div id="d2">text</div>
+
+    <script>
+        function rodytiHtml() {
+            $('#d1').html($('p').html());
+            $('#d2').text($('p').html());
+        }
+        function rodytiText() {
+            $('#d1').html($('p').text());
+            $('#d2').text($('p').text());
+        }
+    </script>
+</body>
+
+</html>

@@ -1,5 +1,5 @@
 .content {
-  background-color: lightgrey;
+  background-color: lightblue;
   color: black;
 }
 
@@ -8,7 +8,7 @@
 }
 
 .content a:link, .content a:visited {
-  color: brown;
+  color: red;
 }
 
 .content a:hover {

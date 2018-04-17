@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>jQuery - value function</title>
+    <meta charset="UTF-8">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+</head>
+
+<body>
+    <ul>
+        <li>Meniu A</li>
+        <li>Meniu B</li>
+        <li>Meniu C</li>
+    </ul>
+    
+    <button onclick="eile()">Number</button>
+
+    <script>
+        var nr = 1;
+        function eile() {
+            $('li').html(function(i, original) {
+                nr++;
+                return '<b>' + (i + 1) + '</b> ' + 
+                    String.fromCharCode(97 + nr) + ' ' +
+                    original;
+            });
+        }
+    </script>
+</body>
+
+</html>

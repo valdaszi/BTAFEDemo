@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM CSS</title>
+        <style>
+            .abc {
+                color: green;
+            }
+            .raudona {
+                background-color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <p id="p2" class="abc">Tekstas</p>
+        <button id="b1">Raudona</button>
+        <button id="b2">Juoda</button>
+        <script>
+            var p = document.getElementById("b1");
+            p.onclick = clickAdd;
+            p = document.getElementById("b2");
+            p.onclick = clickRemove;
+
+            function clickAdd() {
+                var elementas = document.getElementById("p2");
+                var klases = elementas.classList;
+                klases.add("raudona");
+            }
+            function clickRemove() {
+                var elementas = document.getElementById("p2");
+                elementas.classList.remove("raudona");
+            }
+        </script>
+    </body>
+</html>

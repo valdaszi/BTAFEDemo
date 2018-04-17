@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>jQuery - Dimensions</title>
+    <meta charset="UTF-8">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <style>
+         div:not(.clear) {
+            float: left;
+            width: 33.33%;
+            margin: 1em;
+            padding: 1em;
+            border: solid 10px green;
+        }
+        div.clear {
+            clear: both;
+        } 
+    </style>
+</head>
+
+<body>
+    <div>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In mi urna, consequat et fringilla vel, ultrices nec nunc. Sed non tellus eget augue tincidunt pretium in eget ipsum. Morbi nulla neque, elementum et facilisis vitae, pretium non nunc. Nam tellus nibh, feugiat quis iaculis faucibus, laoreet vel lectus. Phasellus eu metus eu quam hendrerit elementum eu nec urna. Proin auctor sapien ultrices dictum elementum. Sed nulla est, sollicitudin finibus justo ut, auctor viverra neque. Praesent ultricies aliquam sapien, vitae feugiat nisl aliquet ut. In hac habitasse platea dictumst. In justo ipsum, congue nec lorem ac, ultricies ultricies velit.
+    </div>
+    <div>
+        Praesent viverra lobortis accumsan. Ut imperdiet a mauris et fringilla. Mauris id faucibus nibh. Sed pulvinar venenatis ornare. Sed libero enim, elementum sed mauris ut, rhoncus interdum nisl. Sed erat libero, blandit non tristique ut, sodales in eros. Phasellus accumsan mauris nec sapien suscipit, quis rhoncus tellus viverra. Nullam vel massa a odio tempus suscipit id nec odio. Sed faucibus faucibus diam, eget varius enim dapibus sed. Nullam in bibendum enim. Nulla rutrum condimentum tellus, a rhoncus nisi fermentum sed. Sed id aliquet nulla.
+    </div>
+    <div>
+        Morbi sed lacinia nisi. Etiam interdum imperdiet turpis eget viverra. Aenean velit felis, eleifend non eleifend et, imperdiet at nulla. Aenean in fringilla lacus. Duis a nisl tortor. Phasellus efficitur nisl quis mauris elementum, in commodo libero elementum. Pellentesque sed turpis magna. Pellentesque luctus eu lectus vel efficitur. Vestibulum blandit malesuada odio eu aliquam.
+    </div>
+  
+    <div class="clear"></div>
+
+    <button onclick="layout()">CSS</button>
+    
+    <script>
+        function layout() {
+            $('div').outerWidth('33.33%', true);
+        }
+    </script>
+</body>
+
+</html>

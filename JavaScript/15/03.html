@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>onchange</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <p>Suskaičiuojame dviejų skaičių sumą</p>
+        <input name="kiekis" onkeyup="suma()">
+        <input name="kaina" onkeyup="suma()">
+        <input name="suma">
+        <!-- <script src="03.js"></script> -->
+        <script>
+            function suma() {
+                var eKiekis = document.querySelector('[name="kiekis"]');
+                var eKaina = document.querySelector('[name="kaina"]');
+                var eSuma = document.querySelector('[name="suma"]');
+                eSuma.value = Number(eKiekis.value) * Number(eKaina.value);
+            }
+        </script>
+    </body>
+</html>

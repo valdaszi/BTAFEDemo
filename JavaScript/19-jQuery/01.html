@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>jQuery - actions</title>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+</head>
+
+<body>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tincidunt eget nulla quis aliquam.
+        Maecenas vel nunc mauris. Suspendisse ut gravida mauris. Fusce ut dignissim eros.
+    </p>
+    
+    <h2>show / hide</h2>
+    <button onclick="slepti()">Slėpti</button>
+    <button onclick="rodyti()">Rodyti</button>
+    
+    <h2>fade</h2>
+    <button onclick="uztemdyti()">Slėpti</button>
+    <button onclick="pasviesinti()">Rodyti</button>
+    <button onclick="fadeJungtukas()">Jungtukas</button>
+
+    <h2>slide</h2>
+    <button onclick="aukstyn()">Aukštyn</button>
+    <button onclick="zemyn()">Žemyn</button>
+    <button onclick="slideJungtukas()">Jungtukas</button>
+
+    <h2>animate</h2>
+    <button onclick="siauras()">Siauras</button>
+    <button onclick="platus()">Platus</button>
+
+    <script>
+        // show / hide
+
+        function slepti() {
+            $('p').hide();
+        }
+        function rodyti() {
+            $('p').show('slow');
+        }
+
+        // fade
+
+        function uztemdyti() {
+            $('p').fadeOut('fast');
+        }
+        function pasviesinti() {
+            $('p').fadeIn('slow');
+        }
+        function fadeJungtukas() {
+            $('p').fadeToggle(2000);
+        }
+
+        // slide
+
+        function aukstyn() {
+            $('p').slideUp('fast');
+        }
+        function zemyn() {
+            $('p').slideDown('slow');
+        }
+        function slideJungtukas() {
+            $('p').slideToggle(2000);
+        }
+
+        // animate
+
+        function siauras() {
+            $('p').animate({width: '50%', marginLeft: '25%'});
+        }
+        function platus() {
+            $('p').animate({width: '100%', marginLeft: '0'}, 2000);
+        }
+    </script>
+</body>
+
+</html>

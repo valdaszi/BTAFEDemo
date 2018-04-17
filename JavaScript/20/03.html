@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>jQuery - CSS</title>
+    <meta charset="UTF-8">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <style>
+        div {
+            background-color: lightblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tincidunt eget nulla quis aliquam.
+        Maecenas vel nunc mauris. Suspendisse ut gravida mauris. Fusce ut dignissim eros.
+    </div>
+    
+    <button onclick="stilius()">CSS</button>
+    
+    <p></p>
+
+    <script>
+        //document.querySelector('div').style.backgroundColor = 'green';
+
+        function stilius() {
+            $('p').html(
+                'JS: ' + document.querySelector('div').style.backgroundColor + '<br>' +
+                'jQuery: ' + $('div').css('background-color') + '<br>'
+            );
+        }
+    </script>
+</body>
+
+</html>

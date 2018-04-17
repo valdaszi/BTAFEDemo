@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>  
+<title>1</title>
+
+</head>
+
+<body>   
+    <div id="a1"></div>
+    <div id="a2"></div>
+    <div id="a3"></div>
+    <div id="a4"></div>
+    <br>
+    <div id="a5"></div>
+    <div id="a6"></div>
+    <div id="a7"></div>
+    <div id="a8"></div>
+
+    <script>
+        /*
+         * A - laisve
+         * B - kalejimas
+         */
+        function teisuolis(durys, sargybinis) {
+            if (sargybinis) return sargybinis(durys);
+            return durys == 'A';
+        }
+        function melagis(durys, sargybinis) {
+            return !teisuolis(durys, sargybinis); 
+        }
+        
+        document.getElementById('a1').innerHTML = 'teisuolis A: ' + teisuolis('A');
+        document.getElementById('a2').innerHTML = 'teisuolis B: ' + teisuolis('B');
+        document.getElementById('a3').innerHTML = 'melagis A: ' + melagis('A');
+        document.getElementById('a4').innerHTML = 'melagis B: ' + melagis('B');
+
+        document.getElementById('a5').innerHTML = 'teisuolis (melagis A): ' + teisuolis('A', melagis);
+        document.getElementById('a6').innerHTML = 'teisuolis (melagis B): ' + teisuolis('B', melagis);
+        document.getElementById('a7').innerHTML = 'melagis (teisuolis A): ' + melagis('A', teisuolis);
+        document.getElementById('a8').innerHTML = 'melagis (teisuolis B): ' + melagis('B', teisuolis);
+
+    </script>
+</body>
+</html>

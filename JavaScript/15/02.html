@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>onchange</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <select id="e" onchange="nauja()">
+            <option value="Agurkas">agurkas</option>
+            <option value="Burokas">burokas</option>
+        </select>
+        <p><span>Runkelis</span> - naudinga daržovė</p>
+
+        <br>
+
+        <p>Suskaičiuojame dviejų skaičių sumą</p>
+        <input name="kiekis" onchange="suma()">
+        <input name="kaina" onchange="suma()">
+        <input name="suma" onchange="kiekis()">
+        <!-- <script src="02.js"></script> -->
+        <script>
+            function nauja() {
+                var element = document.getElementById('e');    
+                var reiksme = element.value;   
+                document.querySelector('span').innerHTML = reiksme;
+            }
+
+            function suma() {
+                var eKiekis = document.querySelector('[name="kiekis"]');
+                var eKaina = document.querySelector('[name="kaina"]');
+                var eSuma = document.querySelector('[name="suma"]');
+                eSuma.value = Number(eKiekis.value) * Number(eKaina.value);
+            }
+            function kiekis() {
+                var eKiekis = document.querySelector('[name="kiekis"]');
+                var eKaina = document.querySelector('[name="kaina"]');
+                var eSuma = document.querySelector('[name="suma"]');
+                if (Number(eKaina.value) != 0) {
+                    eKiekis.value = Number(eSuma.value) / Number(eKaina.value);
+                }
+            }
+        </script>
+    </body>
+</html>

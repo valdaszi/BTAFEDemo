@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>onclick - selektoriai</title>
+        <meta charset="UTF-8">
+        <style>
+            .board { 
+                width: 5em; 
+                height: 5em; 
+                display: grid; 
+                grid-template-columns: 50% 50%;
+                grid-template-rows: 50% 50%;
+                grid-gap: 4px; 
+            }
+            .cell { 
+                background-color: green; 
+                display: flex; 
+                align-items: center; 
+                justify-content: center 
+            }
+            #figure::after {
+                width: 1em;
+                color: white;
+                content: "\265B";
+            }
+        </style>
+    </head>
+    <body>
+        <div class="board">
+            <div id="a1" class="cell" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div id="figure" draggable="true" ondragstart="drag(event)"></div>
+            </div>
+            <div id="a2" class="cell" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div id="b1" class="cell" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div id="b2" class="cell" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        </div>
+        <span id="steps"><div>Ėjimai:</div></span>
+
+        <script>
+            var id, parentId;
+
+            function drag(e) {
+                id = e.target.id; // atsiminti elemento id
+                parentId = e.target.parentElement.id;
+                e.dataTransfer.setData("text", id);
+            }
+            function allowDrop(e) {
+                // jei tas pats arba jo tevas arba a2 tai neleidžiame "numesti"
+                if (e.target.id == id || e.target.id == parentId || e.target.id == 'a2') return;
+
+                e.preventDefault();     // reikia kviesti šitą funkciją kad leisti "numesti" elementą
+            }   
+            function drop(e) {
+                e.preventDefault();     // uždraudžiam standartinį naršyklės veikimą su elementu - kaip kad mygtuko paspaudimas ir pan.
+                
+                var element = document.getElementById(id);  // randame elementą
+                e.target.appendChild(element);
+
+                var steps = document.getElementById('steps'); 
+                var step = document.createElement("div");
+                step.innerHTML = parentId + '-' + e.target.id;
+                steps.appendChild(step);
+            }
+        </script>
+    </body>
+</html>

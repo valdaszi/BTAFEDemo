@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Data / laikas</title>
+    </head>
+    <body>
+        <p id="p1"></p>
+        <script>            
+            var d1 = new Date(2017, 0, 1);
+            
+            var innerHTML = '';
+            
+            for (i = 0; i <= 2; i++) {
+                var d2 = new Date(2017, 0, i);
+                        
+                var s;
+                if (d1 < d2) s = ' ankstesnė už ';
+                else if (d1 > d2) s = ' vėlesnė už '; 
+                else if (d1.getTime() == d2.getTime()) s = ' tokia pat kaip '; 
+                else s = ' kažkokia neaiški lyginant su ';
+                
+                innerHTML += '<div>' + d1 + s + d2 + '</div>';    
+            }
+
+            var elementas = document.getElementById('p1');
+            elementas.innerHTML = innerHTML;
+
+        </script>
+    </body>
+</html>

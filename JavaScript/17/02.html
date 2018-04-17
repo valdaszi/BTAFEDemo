@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM CSS</title>
+        <style>
+            .abc {
+                background-color: green;
+            }
+            .raudona {
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <p id="p2" class="abc">Tekstas</p>
+        <button>Mygtukas</button>
+        <script>
+            var p = document.querySelector("button");
+            p.onclick = click;
+
+            function click() {
+                var elementas = document.getElementById("p2");
+                elementas.className = "abc raudona";
+            }
+        </script>
+    </body>
+</html>

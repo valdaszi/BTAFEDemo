@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>onclick - selektoriai</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <p onclick="suskaiciuoti()">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vestibulum in nisi id sagittis. Nunc ac iaculis orci. Cras eros massa, auctor rutrum nulla aliquam, feugiat laoreet urna. Proin a molestie quam. Nam ac nisi vel odio finibus vehicula. Fusce scelerisque odio vitae nunc finibus, eu varius lacus vehicula. Pellentesque id sapien magna. Nam rhoncus congue est, id interdum orci lobortis eu. Proin accumsan ut tellus in imperdiet.
+        </p>
+        <p></p>
+        <button onclick="valyti()">Iš naujo</button>
+        <!-- <script src="02.js"></script> -->
+        <script>
+            var kiek = 0;
+
+            function rodyti() {
+                document.querySelector("p + p").innerHTML = kiek;
+            }
+
+            function suskaiciuoti() {
+                kiek++;
+                rodyti();
+            }
+
+            function valyti() {
+                kiek = 0;
+                rodyti();
+            }
+        </script>
+    </body>
+</html>

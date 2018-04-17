@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Prototipai</title>
+    </head>
+    <body>
+        <p id="p1"></p>
+        <script>            
+           function Automobilis(nr, t, s) {
+               this.numeris = nr;
+               this.laikas = t;
+               if (s) this.atstumas = s;
+               this.greitis = function () {
+                   return this.atstumas / this.laikas * 3.6;
+                };
+            }
+            var automobiliai = [
+                new Automobilis('LRS001', 150, 5000),
+                new Automobilis('ABC222', 125)
+            ];
+            
+            // sukuriame metodą paskaičiuojantį greitį m/s
+            Automobilis.prototype.greitisms = function() { return this.atstumas / this.laikas };
+            Automobilis.prototype.atstumas = 5000;
+
+            var elementas = document.getElementById('p1');
+            var innerHTML = ''; 
+            automobiliai.forEach(a => {
+                innerHTML += '<div>' + a.numeris + ' važiavo ' + Math.round(a.greitis()) + ' km/h arba ' + Math.round(a.greitisms()) + ' m/s</div>';
+            });
+            elementas.innerHTML = innerHTML;
+
+        </script>
+    </body>
+</html>

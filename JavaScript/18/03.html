@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Prototipai</title>
+        <script>  
+
+            function onFormSubmit() {
+                var elem = document.querySelector('button');
+                elem.setAttribute('disabled', '');
+                var elementas = document.getElementById('p1');
+                elementas.innerHTML = 'Atstumas ' + document.forms['forma']['atstumas'].value +
+                    ' ir laikas ' + document.forms['forma']['laikas'].value;
+                return false;
+            }
+        </script>
+    </head>
+    <body>
+        <form name="forma" action="" onsubmit="return onFormSubmit()">
+            <input name="atstumas" type="number">
+            <input name="laikas" type="number">
+            <button>Saugoti</button>
+        </form>
+
+        <div id="p1"></div>
+    </body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM CSS</title>
+    </head>
+    <body>
+        <p id="p2">Tekstas</p>
+        <button>Mygtukas</button>
+        <script>
+            var p = document.querySelector("button");
+            p.onclick = click;
+            
+            function click() {
+                var elementas = document.getElementById("p2");
+                elementas.style.color = "white";
+                elementas.style.backgroundColor = "green";
+            }
+        </script>
+    </body>
+</html>

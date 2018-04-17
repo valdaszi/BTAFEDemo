@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>jQuery - insert/delete</title>
+    <meta charset="UTF-8">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="02.css">
+</head>
+
+<body>
+    <button onclick="append()">Append</button>
+    <button onclick="prepend()">Prepend</button>
+    <button onclick="after()">After</button>
+    <button onclick="before()">Before</button>
+
+    <button onclick="remove()">Remove</button>
+    <button onclick="empty()">Empty</button>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Veiksmas</th>
+                <th>Nr</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script>
+        var a = 1;
+        function append() {
+            $('tbody').append('<tr><td>Append</td><td>' + (a++) + '</td></tr>');
+        }
+
+        var b = 1;
+        function prepend() {
+            $('tbody').prepend('<tr><td>Prepend</td><td>' + (b++) + '</td></tr>');
+        }
+
+        var c = 1;
+        function after() {
+            $('table').after('<p>After ' + (c++) + '</p>');
+        }
+
+        var d = 1;
+        function before() {
+            $('table').before('<p>Before ' + (d++) + '</p>');
+        }
+
+        function remove() {
+            $('p').remove('p + p');
+        }
+
+        function empty() {
+            $('tbody').empty();
+        }
+    </script>
+</body>
+
+</html>
