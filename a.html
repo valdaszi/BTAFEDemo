@@ -1,16 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>    
-    <script>
-        var ilgis = 100;
-        alert('kintamojo "ilgis" reikšmė yra ' + ilgis);
+    <meta charset="utf-8">
+    <title>A</title>
+    <style>
         
-    </script>
+    </style>
 </head>
 <body>
+    <div id="a1">Numeriai</div>
+    <div id="a2">Title 2</div>
+    <div id="a3"></div>
+    <script>
+        var autos = [];
+
+        var restore = window.localStorage.getItem('automobiliai');
+        if (restore) {
+            autos = JSON.parse(restore);
+        }
+
+
+        lentele();
+
+        function lentele() {
+            var text = '';
+            autos.forEach(a => text += '<div>' + a.numeris + '</div>')
+            document.getElementById('a2').innerHTML = text;
+        }
+
+        document.getElementById('a3').innerHTML = JSON.stringify(autos);
+        //window.localStorage.setItem('automobiliai', JSON.stringify(autos));
+
+    </script>
 </body>
+
 </html>

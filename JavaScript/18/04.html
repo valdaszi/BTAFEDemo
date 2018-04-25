@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Try-catch</title>
+</head>
+<body>
+    <div id="a">Miestai</div>
+
+    <script>
+        var data = [
+            {id: 10, company: ' UAB Turgus', address: {city: 'Kaunas', street: 'Pilies g.'}},
+            {id: 11, company: ' MB Firma'},
+            {id: 12, company: ' AB Koncernas', address: {city: 'Babtai', street: 'Vytauto al.'}},
+        ];
+
+        var element = document.getElementById('a'); 
+        data.forEach(x => { 
+            // element.innerHTML += '<p>' + x.address.city + '</p>'
+            try {
+                element.innerHTML += '<p>' + x.address.city + '</p>'
+            } catch(e) {
+                element.innerHTML += '<p style="color:red">' + e + '</p>';
+            }
+        });
+
+    </script>
+</body>
+</html>
