@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+        <title>Nike</title>
+        <link rel="stylesheet" type="text/css" href="reset.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .meniu {
+                position: relative;
+                width: 2em;
+                height: 2em;
+            }
+            .meniu div {
+                width: 1.5em;
+                position: absolute;
+                border: 1px solid;
+                transition: transform 0.5s;
+            }
+            .meniu div:nth-child(1) {
+                transform: translateY(0.5em) rotate(0);
+            }
+            .meniu div:nth-child(2) {
+                transform: translateY(1em) scaleX(1);
+            }
+            .meniu div:nth-child(3) {
+                transform: translateY(1.5em) rotate(0);
+            }
+            
+            /* ---- */
+
+            .meniu.a div:nth-child(1) {
+                transform: translateY(1em) rotate(-405deg);
+            }
+            .meniu.a div:nth-child(2) {
+                transform: translateY(1em) scaleX(0);
+            }
+            .meniu.a div:nth-child(3) {
+                transform: translateY(1em) rotate(405deg);
+            }
+
+        
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul class="leftSide">
+                    <img src="images/logo.png" alt="logo">
+                    <li>Footwear</li>
+                    <li>Clothing</li>
+                    <li>Accessories</li>
+                    <li>Brands</li>
+                    <li>Exclusive</li>
+                </ul>
+                
+                <ul class="rightSide">
+                    <li>
+                        <img src="images/search.png"> Search
+                    </li>
+                    <li>
+                        <img src="images/cart.png" class="cart"> Cart <span>(2)</span>
+                    </li>
+                    <li>
+                        <img src="images/profile.png"> Sign in
+                    </li>
+                    
+                    <!-- <img src="images/menu.svg" class="sandwich"> -->
+                    <div class="meniu">
+                        <div></div>
+                        <div id="d1" ></div>
+                        <div></div>
+                    </div>
+                </ul>
+                
+                <div class="clearfix"></div>
+            </nav>
+            
+            <div class="topWrapper">
+                <img class="shoe" src="images/shoe.png">
+                
+                <div class="rightSide">
+                    <div class="heart">
+                        <img src="images/heart.png">
+                    </div>
+                    
+                    <h3>NIKE</h3>
+                    <h2>AIR MAX TAVAS SD</h2>
+                    <div class="price">$ 160.00</div>
+                    <div class="colors">COLORS - <span>Black/Pink Pow/Tour Yellow/White</span></div>
+                    
+                    <div class="box selected">
+                        <img src="images/shoe.png">
+                    </div>
+                    
+                    <div class="box">
+                        <img src="images/shoe.png">
+                    </div>
+                    
+                    <label for="shoesSize">Size charts</label>
+                    <select id="shoesSize">
+                        <option disabled selected>Size</option>
+                        <option>40</option>
+                        <option>41</option>
+                        <option>43</option>
+                    </select>
+                    
+                    <button>ADD TO CART</button>
+                    
+                </div>
+            </div>
+            
+        </header>
+        
+        <section class="feat1">
+            <div class="paralax"></div>
+            <h4>CLASSIC CUSHIONING. MODERN COMFORT.</h4>
+            <p>The Nike Air Max Tavas SD Men's Shoe recalls the profile of the iconic running original with a Max Air unit in the heel and multi-surface Waffle outsole. A lightweight upper and gradient detail offer a comfortable fit and dynamic look.</p>
+        </section>
+        
+        <section class="feat2">
+            <div class="leftSide">
+                <h6>Story</h6>
+                <h2>NIKE AIR MAX ORIGINS</h2>
+                <p>Nike's revolutionary Air-Sole unit made its way into Nike footwear in the late '70s. In 1987, the Nike Air Max 1 debuted with visible air in its heel, allowing fans more than just the feel of Air-Sole comfort</p>
+                
+                <h6 class="benefits">BENEFITS</h6>
+                
+                <h4>Layered textile/synthetic upper</h4> 
+                <h5>for lightweight durability and comfort</h5> 
+                <h4>Injected Phylon midsole doubles</h4> 
+                <h5>Outsole to reduce the overall weight of the shoe</h5> 
+                <h4>Max Air heel unit</h4> 
+                <h5>delivers maximum lightweight cushioning</h5> 
+                <h4>Rubber Waffle outsole</h4> 
+                <h5>Durable, multi-surface traction</h5>
+            </div>
+            
+            <img class="shoes" src="images/shoes.png">
+            
+            <div class="rightSide">
+                <h3>NIKE</h3>
+                <h2>AIR MAX TAVAS SD</h2>
+                <div class="colors">Black/Pink Pow/Tour Yellow/White</div>
+                <img class="shoe" src="images/shoe.png">
+                <div class="leftPrice">EN STOCK</div>
+                <div class="rightPrice">$160.00</div>
+                <div class="clearfix"></div>
+                
+                <select id="shoesSize">
+                    <option disabled selected>Size</option>
+                    <option>40</option>
+                    <option>41</option>
+                    <option>43</option>
+                </select>
+                    
+                <button>ADD TO CART</button>
+            </div>
+        </section>
+        
+        <div class="gallery"></div>
+        
+        <script>
+            document.querySelector('.meniu').onclick = function() {
+                this.classList.toggle('a');
+            };
+        
+        </script>
+    </body>
+</html>

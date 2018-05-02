@@ -27,19 +27,6 @@
                 console.log(resp);
                 $('p').html('Pašto indeksas: ' + resp.data[0].post_code);   
             });
-
-            // $.get('https://postit.lt/data', 
-            //     {'address': gatve + ' ' + numeris +', ' + miestas}
-            // ).done(function(resp) {
-            //     console.log(resp);
-            //     if (resp.data && resp.data.length > 0) {
-            //         $('p').html('Pašto indeksas: ' + resp.data[0].post_code);
-            //     } else {
-            //         $('p').html('Blogas adresas');
-            //     }
-            // }).error(function() {
-            //     $('p').html('Serverio klaida');
-            // });
         }
     </script>
 </body>

@@ -1,38 +1,24 @@
-<!DOCTYPE HTML>
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>A</title>
-    <style>
-        
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
 </head>
 <body>
-    <div id="a1">Numeriai</div>
-    <div id="a2">Title 2</div>
-    <div id="a3"></div>
+    <div onclick="a(1)">1</div>
+    <div onclick="a(2)">2</div>
+    <div onclick="a(3)">3</div>
+    <button id="ok">OK</button>
+    <p id="t"></p>
+
     <script>
-        var autos = [];
-
-        var restore = window.localStorage.getItem('automobiliai');
-        if (restore) {
-            autos = JSON.parse(restore);
+    function a(i) {
+        document.getElementById('ok').onclick = function() {
+            document.getElementById('t').innerHTML = i;
         }
-
-
-        lentele();
-
-        function lentele() {
-            var text = '';
-            autos.forEach(a => text += '<div>' + a.numeris + '</div>')
-            document.getElementById('a2').innerHTML = text;
-        }
-
-        document.getElementById('a3').innerHTML = JSON.stringify(autos);
-        //window.localStorage.setItem('automobiliai', JSON.stringify(autos));
-
+    }
     </script>
 </body>
-
 </html>
