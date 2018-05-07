@@ -1,6 +1,6 @@
 <?php
 
-//sleep(10);
+sleep(10);
 
 header("Content-Type: application/json; charset=UTF-8");
 

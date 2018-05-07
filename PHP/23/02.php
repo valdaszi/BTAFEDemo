@@ -19,7 +19,7 @@ if ($conn->connect_errno) {
     exit;
 }
 
-$data = '2017-07-18 15:17:25';
+$data = '2019-07-18 15:17:25';
 $numeris = '000000';
 $kelias = 5000;
 $laikas = 99;
@@ -28,7 +28,7 @@ $laikas = 99;
 $sql = "INSERT INTO `radars`(`date`, `number`, `distance`, `time`) VALUES(?, ?, ?, ?)"; 
 //$stmt = $conn->prepare($sql);
 
-if (!($stmt = $conn->prepare($insert))) {
+if (!($stmt = $conn->prepare($sql))) {
     echo json_encode([
         success => false,
         error => $conn->error
@@ -39,13 +39,13 @@ if (!($stmt = $conn->prepare($insert))) {
 // Priskiriame parametrų reikšmes
 $stmt->bind_param("ssdd", $data, $numeris, $kelias, $laikas);
 
-// if (!($stmt->bind_param("ssdd", $data, $numeris, $kelias, $laikas))) {
-//     echo json_encode([
-//         success => false,
-//         error => $stmt->error
-//     ]);
-//     exit;
-// }
+if (!($stmt->bind_param("ssdd", $data, $numeris, $kelias, $laikas))) {
+    echo json_encode([
+        success => false,
+        error => $stmt->error
+    ]);
+    exit;
+}
 
 // Vykdome INSERT užklausą
 $stmt->execute();

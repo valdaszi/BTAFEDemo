@@ -20,6 +20,8 @@ if ($conn->connect_error) {
     die('Connect Error (' . $conn->connect_errno . ') ' . $conn->connect_error);
 }
 
+$a = $_GET['aaa']; 
+
 // Suformuojame SELECT užklausą
 $sql = 'SELECT id, number, distance/time*3.6 as speed, date FROM radars ORDER BY number, date DESC';
 
@@ -37,7 +39,7 @@ if ($result->num_rows > 0) {
                 <th>Greitis</th>
             </tr>
         
-            <!-- einame cikle per visas rezultato eilutes ir jas išvedame --> 
+            <?php // einame cikle per visas rezultato eilutes ir jas išvedame ?> 
             <?php while($row = $result->fetch_assoc()) { ?>
                 <tr>
                     <td><?php echo $row['id']; ?></td>
