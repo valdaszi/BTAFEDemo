@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script>
+        var app = angular.module('myApp', []);
+
+        app.component('lentele', {
+            template: `
+                <h3>Lentele</h3>
+                <table>
+                    <tr>
+                        <th>Data</th><th>Numeris</th>
+                    </tr>
+                    <tr ng-repeat="e in $ctrl.items">
+                        <td>{{ e.date }}</td><td>{{ e.number }}</td>
+                    </tr>
+                </table>
+                <button ng-click="$ctrl.add()">Prideti</button>
+                `,
+            bind: {
+                name: '@'
+            },
+            controller: lenteleController
+        })
+
+        function lenteleController($timeout) {
+            this.items = [];
+            $timeout(() => {
+                this.items = [
+                    {date: '2018-01-01', number: 'AAA001'},
+                    {date: '2018-01-02', number: 'AAA002'},
+                    {date: '2018-01-03', number: 'AAA003'}
+                ];
+            }, 2000);
+
+            this.add = () => {
+                this.items.push({date: '2018-01-04', number: 'AAA004'});
+            };
+        }
+
+        app.component('eilute', {
+            template: `
+            <input type="number" ng-model="$ctrl.kiekis">
+            <input type="number" ng-model="$ctrl.kaina">
+            <p>Suma: {{ $ctrl.kiekis * $ctrl.kaina }} </p>
+            `,
+            controller: eiluteController
+        });
+
+        function eiluteController() {
+            this.kiekis = 0;
+            this.kaina = 0;
+        }
+    
+    </script>
+</head>
+<body ng-app="myApp">
+    <h1>A</h1>
+    <lentele></lentele>
+    <br><br>
+    <eilute></eilute>
+</body>
+</html>

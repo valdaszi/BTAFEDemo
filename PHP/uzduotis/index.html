@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <style>
+        .modal {
+            visibility: hidden;
+            position: fixed;
+            left: 0; right: 0; top: 0; bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .modal .content {
+            background-color: white;
+            padding: 10px;
+            border: 4px solid white;
+            border-radius: 4px;
+            box-shadow: 1px 1px 4px black;
+        }
+    
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="error"></div>
+        <table>
+            <thead>
+                <tr>
+                    <td>id</td>
+                    <td>Data</td>
+                    <td>Numeris</td>
+                    <td>Atstumas</td>
+                    <td>Laikas</td>
+                    <td></td>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+
+        <button onclick="page(2)">2</button>
+        <button onclick="page(5)">5</button>
+        <button onclick="page(10)">10</button>
+    </div>
+
+    <div class="modal" id="confirm" onclick="closeConfirm()">
+        <div class="content">
+            <p>Ar tikrai norite istrinti?</p>
+            <div>
+                <button>Ne</button>
+                <button id="confirm-ok">Taip</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(function () {
+
+            gautiLentele();
+
+        });
+
+        function gautiLentele(pageSize = 10) {
+            pageSize = pageSize < 1 || pageSize > 10 ? 10 : pageSize; 
+            $.get('lentele.php', { page: pageSize }, function (resp) {
+                if (resp.success) {
+                    rodytilentele(resp.data);
+                } else {
+                    $('#error').text('kazkokia klaida');
+                }
+            }).fail(function () {
+                $('#error').text('kazkokia rimta klaida');
+            });
+        }
+
+        function rodytilentele(data) {
+            var txt = '';
+            data.forEach(x => {
+                txt += '<tr>' +
+                    '<td>' + x.id + '</td>' +
+                    '<td>' + x.date + '</td>' +
+                    '<td>' + x.number + '</td>' +
+                    '<td>' + x.distance + '</td>' +
+                    '<td>' + x.time + '</td>' +
+                    '<td>' +
+                    // '<a href="trinti.php?id=' + x.id + '">Trinti</a>' + 
+                    '<button onclick="trinti(' + x.id + ')">Trinti</button>' +
+                    '</td>' +
+                    '</tr>';
+            });
+            document.querySelector('tbody').innerHTML = txt;
+        }
+
+        function trinti(autoId) {
+            document.getElementById('confirm').style.visibility = 'visible';
+            document.getElementById('container').style.filter = 'blur(2px)';
+
+
+            document.getElementById('confirm-ok').onclick = function() {
+                // $('#error').text('Trinamas id: ' + autoId);
+ 
+                $.get('trinti.php', { id: autoId }, function (resp) {
+                    if (resp.success) {
+                        gautiLentele();
+
+                    } else {
+                        $('#error').text('kazkokia klaida trinant');
+                    }
+                }).fail(function () {
+                    $('#error').text('kazkokia rimta klaida trinant');
+                });            
+            }
+
+            
+        }
+
+        function closeConfirm() {
+            document.getElementById('confirm').style.visibility = 'hidden';
+            document.getElementById('container').style.filter = 'blur(0)';
+        }
+
+        function page(sk) {
+            gautiLentele(sk);
+        }
+    </script>
+</body>
+
+</html>

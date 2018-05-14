@@ -1,1 +1,7 @@
 a.html
+
+node_modules
+dist
+coverage
+
+PHP/wordpress
